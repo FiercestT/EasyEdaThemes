@@ -2,11 +2,9 @@
 
 ## 📖 Overview
 
-This extension revamps the entire EasyEda UI with several unique **Dark** and **Light** themes (mainly the dark ones 🕶️).
+This extension revamps the entire EasyEda UI with several unique **Dark** 🕶️ and some **Light** themes.
 
-It is all contained in an extension that can run on the easyeda website or standalone app, in any browser (tested chrome and firefox).
-
-<br>
+It is all contained in an extension that can run on the EasyEda website or standalone app, in any browser (tested chrome and firefox).
 
 ## 💾 Installing 
 
@@ -19,8 +17,6 @@ It is all contained in an extension that can run on the easyeda website or stand
 7) You can now go to `Theme Settings > Select Theme` to select a theme.
 
 Note: If you remount the extension, it is reccomended that you reload the page (`Right Click > Reload` on standalone app).
-
-<br>
 
 ## 📷 Screenshots
 
@@ -44,14 +40,9 @@ Oceanic
 Light Owl
 ![](./img/Light_Owl.png)
 
-
-<br>
-
 ## 🔨 Contributing
 
 Whether you want to add to the project, edit it for yourself, or fix some CSS that I missed, the following can help you out a bit when it comes to the project and EasyEda extensions.
-
-<br>
 
 ### File Structure
 
