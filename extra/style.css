@@ -1,0 +1,1033 @@
+/*
+    Can't upload .css files with extensions, .txt will work.
+
+    This can be optimized but it works.
+    Comments are unfinished.
+*/
+
+/* Specific Things */
+
+a:-webkit-any-link {
+    color: var(--Links_Color) !important;
+}
+
+/* Scrollbar */
+* {
+    scrollbar-width: thin !important;
+    scrollbar-color: var(--Accent_Color) !important;
+}
+
+*::-webkit-scrollbar {
+    width: 5px !important;
+    height: 5px !important;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+  
+*::-webkit-scrollbar-thumb {
+    background-color: var(--Accent_Color) !important;
+    border-radius: 20px !important;
+}
+
+/* Input Field Placeholders */
+
+::placeholder { 
+    color: var(--Disabled) !important;
+    opacity: 1; 
+}
+
+:-ms-input-placeholder { 
+  color: var(--Disabled) !important;
+}
+
+::-ms-input-placeholder { 
+  color:var(--Disabled) !important;
+}
+
+/* Text Highlighting */
+::-moz-selection { /* Code for Firefox */
+  color: var(--Selection_Foreground);
+  background: var(--Selection_Background);
+}
+
+::selection {
+  color: var(--Selection_Foreground);
+  background: var(--Selection_Background);
+}
+
+/* Main */
+
+body
+{
+    color: var(--Text) !important;
+    background: var(--Background) !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+#main {
+    border-top: 1px solid var(--Contrast) !important;
+}
+
+/* Input Fields */
+
+.menu-search .menu-search-input:valid~.menu-search-empty {
+    color: var(--Accent_Color) !important;
+}
+
+.menu-search .menu-search-input {
+    background: var(--Background) !important;
+    border-bottom: 1px solid var(--Accent_Color) !important;
+    color: var(--Text) !important;
+    caret-color: var(--Accent_Color);
+}
+
+input:disabled {
+    opacity: 1 !important;
+}
+
+input[type=color], input[type=email], input[type=number], input[type=telephone], input[type=text] {
+    background: none !important;
+    color: var(--Text) !important;
+    border: none !important;
+    border-bottom: 1px solid var(--Accent_Color) !important;
+    caret-color: var(--Accent_Color) !important;
+    border-radius: 0px;
+    opacity: 0.8;
+}
+
+input[type=color]:focus, input[type=email]:focus, input[type=number]:focus, input[type=telephone]:focus, input[type=text]:focus {
+    opacity: 1;
+    color: var(--Selection_Foreground) !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Checkboxes */
+input[type=checkbox] {
+    -webkit-appearance: none;
+	background-color: transparent;
+	border: 1px solid var(--Accent_Color) !important;
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+}
+
+input[type=checkbox]:active, input[type=checkbox]:focus {
+    background-color: transparent !important;
+}
+
+input[type=checkbox]:checked:after, input[type=checkbox]:checked:active:after, input[type=checkbox]:checked:focus:after {
+    content: '✓';
+    font-size: 14px;
+    position: absolute;
+    top: 0px;
+    left: 3px;
+	color: var(--Accent_Color) !important;
+}
+
+/* Radio Input */
+[type="radio"]:checked, [type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+[type="radio"]:checked + label, [type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: var(--Text);
+}
+
+[type="radio"]:checked + label:before, [type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--Text);
+    border-radius: 100%;
+    background: transparent;
+}
+
+[type="radio"]:checked + label:after, [type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--Accent_Color);
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+
+select {
+    border: transparent !important;
+    color: var(--Text) !important;
+    background: none !important;
+    border-bottom: 0.5px solid var(--Accent_Color) !important;
+}
+
+select:focus {
+    border: transparent !important;
+}
+
+select option {
+    background: var(--Background) !important;
+    color:  var(--Text) !important;
+}
+
+.easyui-comboboxdrop-select-droplist-input {
+    background: var(--Background) !important;
+    border-bottom: 1px solid var(--Accent_Color) !important;
+    border: transparent;
+    color: var(--Text) !important;
+}
+
+textarea {
+    background: var(--Contrast) !important;
+    color: var(--Foreground) !important;
+    border: 1px solid var(--Contrast) !important;
+    caret-color: var(--Accent_Color) !important;
+}
+
+#new_mydesc {
+    background: transparent !important;
+    color: var(--Text) !important;
+    border: 1.5px solid var(--Contrast) !important;
+}
+
+/* Tables */
+
+table, #dlgLibs-liblist {
+    border: transparent !important;
+}
+
+#dlgLibs-list {
+    background: none !important;
+}
+
+/* Table Headers */
+.fixedTableHeader>div, .fixedTableHeader>div:not(:last-child) {
+    color: var(--Text) !important;
+    background: var(--Background) !important;
+    border-right: none !important;
+}
+
+.fixedTableHeader {
+    border: 1px solid var(--Contrast) !important;
+}
+
+/* Parts Library */
+
+#dlgLibs .dlgLibs-categories-btn-label {
+    color: var(--Text) !important;
+}
+
+#dlgLibs .btn[data-active] {
+    border: none !important;
+    border-bottom: 1px solid var(--Accent_Color) !important;
+    color: var(--Accent_Color) !important;
+    background: none !important;
+}
+
+/* Table Rows */
+tr, th {
+    border-bottom: 1px solid var(--Contrast) !important;
+    color: var(--Text) !important;
+    background: var(--Background) !important;
+}
+
+tr:hover {
+    background: var(--Contrast) !important;
+}
+
+/* Table Datacell */
+#dlgLibs-liblist .fixedTableHeader>div:not(:last-child), #dlgLibs-liblist table tr>:not(:last-child) {
+    border-right: none !important;
+}
+
+/* Selected Cell */
+#dlgLibs tbody tr.selected {
+    color: var(--Selection_Foreground) !important;
+    background: var(--Selection_Background) !important;
+}
+
+/* Table Icons */
+.dlgLibs-liblist-sort-asc .dlgLibs-liblist-sort-icon, .dlgLibs-liblist-sort-desc .dlgLibs-liblist-sort-icon, .panel-tool-collapse, .panel-tool-expand {
+    background: none !important;
+    color: var(--Accent_Color) !important;
+}
+
+/* Table Icons */
+.dlgLibs-liblist-sort-asc .dlgLibs-liblist-sort-icon:after, .panel-tool-collapse::after {
+    content: '▲' !important
+}
+
+.dlgLibs-liblist-sort-desc .dlgLibs-liblist-sort-icon:after, .panel-tool-expand::after {
+    content: '▼' !important
+}
+
+/* Top Bar */
+
+#userbar {
+    background: var(--Background) !important;
+}
+
+a.l-btn-disabled .l-btn-empty:before {
+    color: var(--Disabled) !important;
+}
+
+a.m-btn-plain-active {
+    background: transparent !important;
+    color: var(--Selection_Foreground) !important;
+}
+
+a.l-btn {
+    color: var(--Text) !important;
+}
+
+a.l-btn:hover {
+    color: var(--Selection_Foreground) !important;
+}
+
+#userNameBox:hover {
+    color: var(--Accent_Color) !important;
+}
+
+#userAvatarBox img {
+    border: 1px solid var(--Accent_Color);
+}
+
+
+
+.menu-search .menu-search-empty, .menu-search .menu-search-empty+button {
+    background: var(--Background) !important;
+}
+
+
+
+.menu-search .menu-search-empty, .menu-search .menu-search-empty+button {
+    color: var(--Accent_Color) !important;
+}
+
+.menu {
+    background: var(--Background) !important;
+}
+
+.menu-vlink {
+    background: var(--Foreground) !important;
+}
+
+.menu-active {
+    background: var(--Contrast) !important;
+    color: var(--Variables_Color) !important;
+}
+
+.menu-item-disabled:hover {
+    background-color: var(--Background) !important;
+}
+
+.menu-item-disabled {
+    color: var(--Disabled) !important;
+}
+
+.menu-item-disabled .menu-text {
+    color: var(--Disabled) !important;
+}
+
+.menu-text {
+    color: var(--Text) !important;
+}
+
+.menu-active .menu-text {
+    color: var(--Variables_Color) !important;
+}
+
+.menu-sep {
+    background: var(--Selection_Background) !important;
+}
+
+.menu-item.menu-active, .menu-item.menu-active[data-hotkey]:after {
+    color: var(--Variables_Color) !important;
+}
+
+.menu-rightarrow {
+    border-left: 4px solid var(--Links_Color) !important;
+}
+
+#editor-news {
+    border: 1px solid var(--Border) !important;
+}
+
+#editor-news, .menu, .toolbar {
+    border: 1px solid var(--Border) !important;
+}
+
+#editorTabbar {
+    border-right: none !important;
+}
+
+#leftNavTabs {
+    color: var(--Text) !important;
+    background: var(--Background) !important;
+    border-right: 2px solid var(--Contrast) !important;
+}
+
+#leftNavTabs>div:hover {
+    color: var(--Selection_Foreground) !important;
+    background: var(--Background) !important
+}
+
+#leftNavTabs>div[data-active] {
+    color: var(--Selection_Foreground) !important;
+    background-color: var(--Background) !important;
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+#leftNavTabs+div {
+    background-color: var(--Background) !important;
+}
+
+.tabbar {
+    background: var(--Background) !important;
+    border-bottom: 1px solid var(--Border) !important;
+    color: var(--Text) !important;
+}
+
+.tabbar-tab 
+{
+    border-right: none !important;
+}
+
+#tabbar .tabbar-tab.active {
+    border-bottom: 2px solid var(--Accent_Color) !important;
+    color: var(--Selection_Foreground) !important;
+}
+
+#tabbar .tabbar-tab {
+    background-color: var(--Background) !important;
+}
+
+#tabbar .tabbar-tab:not(.active) {
+    color: var(--Text) !important;
+}
+
+#treeOpenedProject-container .icon16[cmd] {
+    color: var(--Text) !important;
+}
+
+#layoutLeft {
+    border-bottom: none !important;
+}
+
+.layout-toggler {
+    background: var(--Contrast) !important;
+    width: 3px !important;
+    cursor: ew-resize !important;
+}
+
+.layout-toggler-design-manager {
+    background: var(--Contrast) !important;
+    height: 3px !important;
+    cursor: ns-resize !important;
+}
+
+.layout-toggler>div {
+    visibility: hidden !important;
+}
+
+/* Left Bar */
+
+.libgroupcaption {
+    border-bottom: 1px solid var(--Contrast) !important;
+}
+
+.left-search-input {
+    border-bottom: 1px solid var(--Contrast) !important;
+}
+
+.tabbar-bodies>div {
+    background: var(--Background) !important;
+}
+
+.toolbar .titlebar {
+    background: var(--Border) !important;
+    border-bottom: 1px solid var(--Contrast) !important;
+    color: var(--Text) !important;
+}
+
+.toolbar .btns {
+    background: var(--Background) !important;
+}
+
+div.layoutRight {
+    background: var(--Background) !important;
+}
+
+#attr-main .title {
+    background: var(--Contrast) !important;
+    color: var(--Selection_Foreground) !important;
+}
+
+.clear {
+    background: var(--Background) !important;
+}
+
+#attrlist-table-notice .line>div {
+    background: var(--Background);
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+}
+
+#attrlist-table-notice {
+    border-top: 1px solid var(--Contrast) !important;   
+}
+
+.addtab, .sub-tabbar .tabbar-tab {
+    border: none !important;
+    background: var(--Background) !important;
+    color: var(--Text) !important;
+    box-shadow: 0 2px 4px var(--Contrast) !important;
+}
+
+.sub-tabbar .tabbar-tab.active, .sub-tabbar .tabbar-tab:hover:not(.active) {
+    background: var(--Background) !important;
+}
+
+.addtab {
+    border-right: none !important;
+}
+
+.addtab .plus, .addtab .plus:after {
+    background: var(--Text) !important;
+}
+
+.tabs li.tabs-selected a {
+    color: var(--Selection_Foreground) !important;
+    background: var(--Background) !important;
+    border-bottom: 2px solid var(--Accent_Color) !important;
+}
+
+.tabs li a.tabs-inner {
+    color: var(--Text) !important;
+    background: var(--Background) !important;
+}
+
+.tabs {
+    border-bottom: 1px solid var(--Background) !important;
+}
+
+#editor-start-page .box_shadow {
+    box-shadow: -1px -1px 6px var(--Contrast) !important;
+    border: solid 1px var(--Contrast) !important   
+}
+
+#editor_start_right_page {
+    background: var(--Background) !important;
+}
+
+#editor-start-page .weui-grid__label {
+    color: var(--Text) !important;
+}
+
+#editor_start_right_page li * {
+    color: var(--Keywords_Color) !important
+}
+
+#start_page_change_mode {
+    background-color: var(--Accent_Color) !important;
+    color: var(--Notifications) !important;
+}
+
+#use_page_mode_page {
+    border-right: 1px solid var(--Foreground) !important;
+}
+
+#use_page_more_help {
+    border-top: 1px solid var(--Foreground) !important;
+}
+
+.panel-header {
+    background: var(--Background) !important;
+    color: var(--Text) !important;
+}
+
+.panel-header-noborder {
+    border-bottom: 1px solid var(--Contrast) !important;
+}
+
+#dlgLibs-keyword, .window .window-body {
+    background: var(--Background) !important;
+    color: var(--Text) !important;
+}
+
+.window {
+    border: 2px solid var(--Contrast) !important;
+    background: transparent !important;
+}
+
+#path-pre {
+    background: none !important;
+    border: none !important;
+    color: var(--Text) !important;
+    border-bottom: 1px solid var(--Accent_Color) !important;
+}
+
+.dialog-button {
+    background: var(--Background) !important;
+    border-top: 1px solid var(--Contrast) !important;
+}
+
+.dialog-button a.l-btn:not(.l-btn-plain), .messager-button a.l-btn:not(.l-btn-plain) {
+    background: var(--Accent_Color) !important;
+    color: var(--Notifications) !important;
+}
+
+.dialog-button a.l-btn:not(.l-btn-plain):hover, .messager-button a.l-btn:not(.l-btn-plain):hover {
+    background: var(--Accent_Color) !important;
+    color: var(--Notifications) !important;
+}
+
+
+.easyui-combobox-select-droplist, .easyui-comboboxdrop-select-droplist {
+    background: var(--Background) !important;
+    box-shadow: 0px 2px 2px var(--Contrast) !important;
+}
+
+#pcblayerTabs .tabs {
+    background: var(--Background) !important;
+}
+
+#toolbar-pcblayer table {
+    background: var(--Background) !important;
+}
+
+#toolbar-pcblayer tr.active {
+    background: var(--Contrast) !important;
+    color: var(--Variables_Color) !important;
+}
+
+.panel-body {
+    background: var(--Background) !important;
+}
+
+#pcblayerTabs .tabs li {
+    border-left: none !important;
+}
+
+#pcblayerTabs .tabs li.tabs-selected {
+    border-left: none !important;
+}
+
+.tabs-panels {
+    border-left: none !important;
+}
+
+#designManagerTree .icon-eda-refresh {
+    color: var(--Accent_Color) !important;
+}
+
+#designManagerTree .icon-eda-refresh:hover {
+    color: var(--Selection_Foreground) !important;
+}
+
+.libitem {
+    border-bottom: 1px solid var(--Contrast) !important;
+    border-right: 1px solid var(--Contrast) !important;
+}
+
+.libitem:hover {
+    background: var(--Background) !important;
+    color: var(--Selection_Foreground) !important;
+    border-bottom: 1px solid var(--Accent_Color) !important;
+}
+
+.libitem>div.dropdown {
+    border: 1px solid var(--Border) !important;
+    background: var(--Background) !important;
+}
+
+.libitem>div.dropdown:after {
+    border-top: 4px solid var(--Accent_Color) !important
+}
+
+#dlgLibs-filter, #dlgLibs-search {
+    color: var(--Text) !important;
+}
+
+#dlgLibs-filter, #dlgLibs-search:hover {
+    color: var(--Accent_Color) !important;
+}
+
+.dlgLibs-searchform-container {
+    border-bottom: none !important;
+}
+
+#dlgLibs .btn, #dlgLibs-tags-list .btn {
+    border: none !important;
+}
+
+#dlgLibs-list-hierarchy {
+    color: var(--Text) !important;
+}
+
+#dlgLibs-tags {
+    background: var(--Background) !important;
+}
+
+#dlg-tag-tree>li>.tree-node {
+    background: var(--Contrast) !important;
+    border: none !important;
+}
+
+#dlgLibs-preview {
+    background: var(--Background) !important;
+}
+
+#dlg-tag-tree {
+    background: none !important;
+}
+
+.thinborder {
+    border: none !important
+}
+
+#dlg-tag-tree>li>ul>li .tree-title {
+    font-family: 'Roboto', sans-serif;
+}
+
+#dlgLibs .icon16 {
+    color: var(--Accent_Color) !important;
+}
+
+#layoutLeft input, #layoutLeft select {
+    border-radius: 0px !important;
+}
+
+a.l-btn:not(.l-btn-plain) {
+    background: var(--Background) !important;
+    border: 1px solid var(--Accent_Color) !important;
+    color: var(--Accent_Color) !important;
+}
+
+a.l-btn:not(.l-btn-plain):hover {
+    background: var(--Accent_Color) !important;
+    border: 1px solid var(--Accent_Color) !important;
+    color: var(--Notifications) !important;
+}
+
+.hightlight {
+    background: var(--Accent_Color) !important;
+}
+
+#dlgLibs-lcsc .lcsc-price {
+    color: var(--Tags_Color) !important;
+}
+
+#dlgLibs-lcsc-stock {
+    color: var(--Tags_Color) !important;
+}
+
+#dlgLibs-lcsc-part {
+    color: var(--Tags_Color) !important;
+}
+
+#dlgLibs-lcsc-distributor>strong {
+    color: var(--Tags_Color) !important;
+}
+
+.num {
+    color: var(--Tags_Color) !important;
+}
+
+#dlgLibs-lcsc .lcsc-buy, #dlgLibs-lcsc .lcsc-pdf {
+    color: var(--Text) !important;
+}
+
+#dlgLibs-lcsc .lcsc-buy:hover, #dlgLibs-lcsc .lcsc-pdf:hover {
+    color: var(--Selection_Foreground) !important;
+}
+
+#dlgLibs-lcsc-minimum {
+    color: var(--Tags_Color) !important;
+}
+
+.btn:hover {
+    color: var(--Selection_Foreground) !important;
+}
+
+/* Icon Overrides */
+[class*=" icon-"]:not(.dialog-button, a.l-btn):hover, [class^=icon-]:not(.dialog-button, a.l-btn):hover {
+    color: var(--Selection_Foreground) !important;
+}
+
+/* Panel Close Button */
+.panel-tool-close, .panel-tool-max, .panel-tool-min, .panel-tool-restore {
+    background: none !important;
+    color: var(--Tags_Color) !important;
+}
+
+.panel-tool-close:before, .panel-tool-max:before, .panel-tool-min:before, .panel-tool-restore:before {
+    content: '⤫' !important;
+    font-size: 20px;
+    opacity: 1;
+}
+
+.panel-tool-over {
+    color: var(--Tags_Color) !important;
+}
+
+menu-icon.icon-selected {
+    background-color: none !important;
+    outline: none !important;
+}
+
+.ext-item {
+    border-bottom: 1px solid var(--Contrast) !important;
+}
+
+.ext-item.ext-disabled {
+    background: transparent !important;
+}
+
+.ext-disabled .ext-desc, .ext-disabled .ext-name-state {
+    color: var(--Text) !important;
+}
+
+.toolbar .collapse, .toolbar .icon-eda-config, .toolbar .icon-eda-pinlocation {
+    color: var(--Text) !important;
+}
+
+.toolbar .collapse:hover, .toolbar .icon-eda-config:hover, .toolbar .icon-eda-pinlocation:hover {
+    color:  var(--Selection_Foreground) !important;
+}
+
+#dlgExport-tip-Pdf div[fordoctype=pcb] {
+    color: var(--Tags_Color) !important;
+}
+
+.datagrid-header {
+    border-bottom: 1px solid var(--Contrast) !important;
+    background: transparent !important;
+}
+
+.datagrid-body td, .datagrid-footer td {
+    border-right: transparent !important;
+    border-bottom: 1px solid var(--Contrast) !important;
+}
+
+.datagrid-header td {
+    border: transparent !important;
+}
+
+#dlgExportBOM td[field="BOM_Supplier Part"] .assign-part-btn {
+    color: var(--Links_Color) !important;
+    background: transparent !important;
+}
+
+#dlgExportBOM td .verified {
+    color: var(--Accent_Color) !important;
+}
+
+.datagrid-header td.datagrid-header-over {
+    background: none !important;
+}
+
+.i18n link {
+    color: var(--Links_Color) !important;
+}
+
+#dlgLibs-liblist .fixedTableHeader>div, #dlgLibs-liblist table tr>*
+{
+    border-bottom: none !important;
+}
+
+.tree-node-selected {
+    background: transparent !important;
+    color: var(--Accent_Color) !important;
+}
+
+.tree-node-hover {
+    color: var(--Selection_Foreground) !important;
+    background: transparent !important;
+}
+
+.tree-node-selected.tree-node-hover {
+    background: transparent !important;
+    color: var(--Accent_Color) !important;
+}
+
+.panel.window .toggle-size {
+    visibility: collapse !important;
+}
+
+#dlgUpdatePackage .left-list .content {
+    background: transparent !important;
+    border: none !important;
+}
+
+#dlgUpdatePackage .middle-content {
+    border: transparent !important;
+}
+
+#dlgUpdatePackage .colum {
+    border: none;
+}
+
+#dlgUpdatePackage .colum>div {
+    background: transparent !important;
+    color: var(--Text) !important;
+}
+
+#dlgUpdatePackage ul {
+    background-color: transparent !important;
+}
+
+#dlgUpdatePackage ul li.active {
+    background: var(--Selection_Background) !important;
+    color: var(--Selection_Foreground) !important
+} 
+
+#dlgUpdatePackage ul li:hover {
+    background: transparent !important;
+    color: var(--Selection_Foreground) !important;
+}
+
+#dlgUpdatePackage .category, #dlgUpdatePackage .package {
+    background: transparent !important;
+    border: none !important;
+}
+
+#dlgUpdatePackage .middle-content .bottom .header {
+    background: var(--Contrast) !important;
+}
+
+#dlgUpdatePackage .middle-content .bottom>div {
+    border: none !important;
+}
+
+#dlgUpdatePackage .right-list .title span.active {
+    color: var(--Accent_Color) !important;
+    border-bottom: 1px solid var(--Accent_Color) !important;
+}
+
+#dlgUpdatePackage .right-list .title span {
+    color: var(--Text) !important;
+    background: var(--Background) !important;
+    border: none !important;
+    border-left: none !important;
+}
+
+#dlgUpdatePackage .colum {
+    background: none !important;
+}
+
+#dlgUpdatePackage .view svg {
+    border: none !important;
+}
+
+.table td {
+    border: none !important;
+}
+
+#dlgUpdatePackage div.datagrid-header-over {
+    background: var(--Contrast) !important;
+}
+
+.datagrid-sort-asc .datagrid-sort-icon:after {
+    content: '▲' !important
+}
+
+.datagrid-sort-desc .datagrid-sort-icon:after{
+    content: '▼' !important
+}
+
+.datagrid-sort-asc .datagrid-sort-icon, .datagrid-sort-desc .datagrid-sort-icon {
+    background: none !important;
+    color: var(--Accent_Color) !important;
+}
+
+#dlgUpdatePackage .search button {
+    color: var(--Text) !important;
+}
+
+#dlgUpdatePackage .right-list .search button.filter {
+    color: var(--Text) !important;
+}
+
+.tab[show-to].active {
+    color: var(--Accent_Color) !important;
+    border-bottom: 1px solid var(--Accent_Color);
+    background: transparent !important;
+}
+
+.tab[show-to] {
+    color: var(--Text) !important;
+    background: transparent !important;
+}
+
+.boardoutlineset-head-container {
+    border: none !important;
+}
+
+.title .i18n {
+    background: transparent !important;
+    color: var(--Text) !important;
+}
+
+#dlgUpdatePackage div.datagrid-header td[field]:not([field=checked]) {
+    background: transparent !important;
+}
+
+#dlgUpdatePackage .bottom span.tab[show-to] {
+    border-right: none !important;
+}
+
+#dlgUpdatePackage .left-list header>div, #dlgUpdatePackage .right-list header>div {
+    background: transparent !important;
+}
+
+.menu-icon.icon-selected {
+    background-color: transparent !important;
+    outline: none !important;
+}
+
+.dialog-theme-tab {
+    background: var(--Background) !important;
+}
+
+.gray-border {
+    border: 1px solid var(--Contrast) !important;
+}
