@@ -22,7 +22,7 @@ async function Init()
     //Load themes and style async
     THEMES = await (await fetch(api('getRes', 'themes.json'))).json()
     CSS = await (await fetch(api('getRes', 'style.txt'))).text()
-    
+
     InitCommands()
     InitUI()
 
@@ -36,14 +36,14 @@ async function Init()
 
 //#region Commands
 ///Creates the Commands for the EasyEda API
-function InitCommands() 
+function InitCommands()
 {
     //Create commands by indexing them using the pkg names.
     let commands = {}
     commands[getCmd('open_css_diag')] = () => OpenCssDiag()
     commands[getCmd('css_apply')]     = () => ApplyCss()
     commands[getCmd('refresh')]       = () => RefreshTheme()
-    commands[getCmd('apply')] = (themeName) => ApplyTheme(themeName) 
+    commands[getCmd('apply')] = (themeName) => ApplyTheme(themeName)
     /* ^ This exists so that 3rd party extensions can change the theme via:
     api('doCommand', {
         cmd: 'extension-themes-apply',
@@ -111,7 +111,7 @@ function OpenCssDiag()
 }
 
 ///Applies the CSS in the Edit CSS textarea
-function ApplyCss() 
+function ApplyCss()
 {
     CSS = $('#themes_css_textarea').val()
     RefreshTheme()
@@ -126,16 +126,29 @@ function RefreshTheme()
         ApplyTheme(currentTheme)
 }
 
+function AppendCSS(css)
+{
+    const head = document.head || document.getElementsByTagName('head')[0];
+    const style = document.createElement('style');
+
+    if (document.body && !document.body.contains(document.getElementById('theme'))) {
+        head.appendChild(style);
+        style.setAttribute('id', 'theme');
+        style.setAttribute('rel', 'stylesheet');
+        style.setAttribute('type', 'text/css');
+    }
+    style.appendChild(document.createTextNode(css));
+};
+
 ///Applies the theme based on the passed theme name according to its name in 'THEMES' below
 function ApplyTheme(themeName)
 {
     if(!themeName || !Object.keys(THEMES).includes(themeName))
         return
-    
+
     var theme = THEMES[themeName] //Get the theme object
 
-    $('style').remove() //Remove existing style
-    const style = document.createElement('style')
+    $('#theme').remove();
 
     //Write the new CSS
     var CSS_VAR = ':root {\n'
@@ -144,15 +157,14 @@ function ApplyTheme(themeName)
     CSS_VAR += '}'
 
     //Add CSS
-    style.textContent = CSS_VAR + CSS + getCssPatches().join('');
-    document.head.append(style)
+    AppendCSS(CSS_VAR + CSS + getCssPatches().join(''));
 
     //All this below is some hacky code to apply the theme to the schematic
     api('doCommand', 'applyThemeUserDefine')
 
     var MAPPING = {
-        background:   theme.Second_Background, 
-        grid:         theme.Contrast,           
+        background:   theme.Second_Background,
+        grid:         theme.Contrast,
         select:       theme.Selection_Foreground, //Hover
         wire:         theme.Strings_Color,        //Wire
         bus:          theme.Functions_Color,      //Bus
@@ -167,7 +179,7 @@ function ApplyTheme(themeName)
         pinNumber:    theme.Text,                 //Pin Number Color
         partGraphics:       theme.Foreground,     //Part Outline
         partGraphicsPrefix: theme.Text,           //Part Number
-        partGraphicsName:   theme.Text,           //Part Name 
+        partGraphicsName:   theme.Text,           //Part Name
         sheet:        theme.Text,                 //?
         draw:         theme.Selection_Foreground, //Drawn Things
         drawFill:     theme.Selection_Background, //Drawn Things Fill
@@ -190,11 +202,11 @@ function ApplyTheme(themeName)
     //Set Schematic Editor Theme
     api('editorCall', {
         cmd: 'setColors',
-        args: [{ 
+        args: [{
             activeTheme: 'user-define',
             color: { //Note: Cannot use 'MAPPING' variable, does not apply change!
-                background:   theme.Second_Background, 
-                grid:         theme.Contrast,           
+                background:   theme.Second_Background,
+                grid:         theme.Contrast,
                 select:       theme.Selection_Foreground, //Hover
                 wire:         theme.Strings_Color,        //Wire
                 bus:          theme.Functions_Color,      //Bus
@@ -209,7 +221,7 @@ function ApplyTheme(themeName)
                 pinNumber:    theme.Text,                 //Pin Number Color
                 partGraphics:       theme.Foreground,     //Part Outline
                 partGraphicsPrefix: theme.Text,           //Part Number
-                partGraphicsName:   theme.Text,           //Part Name 
+                partGraphicsName:   theme.Text,           //Part Name
                 sheet:        theme.Text,                 //?
                 draw:         theme.Selection_Foreground, //Drawn Things
                 drawFill:     theme.Selection_Background, //Drawn Things Fill
