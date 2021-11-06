@@ -1,3 +1,5 @@
+[![Latest release](https://badgen.net/github/release/FiercestT/EasyEdaThemes)](https://github.com/FiercestT/EasyEdaThemes/releases) [![Github all releases](https://img.shields.io/github/downloads/FiercestT/EasyEdaThemes/total.svg)](https://GitHub.com/FiercestT/EasyEdaThemes/releases/)
+
 # EasyEda Themes Extension
 
 ## 📖 Overview
@@ -8,7 +10,7 @@ It is all contained in an extension that can run on the EasyEda website or stand
 
 ## 💾 Installing 
 
-1) Download the repository or [release](https://github.com/FiercestT/EasyEdaThemes/releases/).
+1) Download the latest [release](https://github.com/FiercestT/EasyEdaThemes/releases/).
 2) Now in EasyEda, open the extensions window by going to: `Advanced > Extensions > Extensions Settings`.
 3) Select `Load Extension > Select Files`.
 4) Select **all** of the files from the `extension` folder from the downloaded repository.
