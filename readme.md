@@ -12,7 +12,7 @@ It is all contained in an extension that can run on the EasyEda website or stand
 2) Now in EasyEda, open the extensions window by going to: `Advanced > Extensions > Extensions Settings`.
 3) Select `Load Extension > Select Files`.
 4) Select **all** of the files from the `extension` folder from the downloaded repository.
-5) **Make sure** that the `Extension ID` field says `themes`. Then load the extension.
+5) **Make sure** that the `Extension ID` field says `themer`. Then load the extension.
 6) Thats it! The themes extension is now mounted.
 7) You can now go to `Theme Settings > Select Theme` to select a theme.
 
@@ -46,14 +46,14 @@ Whether you want to add to the project, edit it for yourself, or fix some CSS th
 
 ### File Structure
 
-| File             | Description                                                                         |
-|------------------|---------------------------------------------------------------------------------|
-| exposeapi.js     | Exposes the api() to be called in the developer console.                        |
-| main.js          | The main code for the extension.                                                |
-| manifest.json    | Must be present to identify the extension.                                      |
-| style.txt        | The CSS styling. It is a .txt as .css is not allowed to be uploaded in EasyEda. |
-| themes.json      | Themes and their colors.                                                        |
-| /extra/style.css | Use this to develop the CSS, when uploading, copy this over to style.txt        |
+| File               | Description                                                                     |
+|--------------------|---------------------------------------------------------------------------------|
+| easyeda-helper.js  | Some helper methods for the EasyEda api                                         |
+| main.js            | The main code for the extension.                                                |
+| manifest.json      | Must be present to identify the extension.                                      |
+| style.txt          | The CSS styling. It is a .txt as .css is not allowed to be uploaded in EasyEda. |
+| themes.json        | Themes and their colors.                                                        |
+| /extra/style.css   | Use this to develop the CSS, when uploading, copy this over to style.txt        |
 
 ### CSS Considerations
 

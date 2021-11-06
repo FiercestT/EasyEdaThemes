@@ -59,8 +59,10 @@ a:-webkit-any-link {
 
 /* Main */
 
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 body
 {
+    font-family: 'Roboto' !important;
     color: var(--Text) !important;
     background: var(--Background) !important;
     font-family: 'Roboto', sans-serif;

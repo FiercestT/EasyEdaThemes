@@ -1,6 +1,11 @@
 {
-    "name": "Custom Themes",
-    "description": "Customize the EasyEda site and editors. Made by Fiercest: https://github.com/FiercestT",
-    "version": "1.0",
-    "scripts": [ "main.js", "exposeapi.js" ]
+    "name": "EasyEda Themer",
+    "description": "Customize the EasyEda UI and editors. Made by Fiercest: https://github.com/FiercestT",
+    "author": "Fiercest",
+    "version": "1.1",
+    "homepage": "https://github.com/FiercestT/EasyEdaThemes",
+    "scripts": [ 
+        "easyeda-helper.js",
+        "main.js"
+    ]
 }
