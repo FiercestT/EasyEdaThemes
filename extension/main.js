@@ -24,7 +24,7 @@ main();
 async function main()
 {
     Helper.checkUpdate()
-    
+
     _themes = await Helper.loadFile('themes.json', Helper.fileTypes.JSON)
     _css = await Helper.loadFile("style.txt", Helper.fileTypes.TEXT)
 
@@ -68,7 +68,7 @@ function cb_ApplyTheme(themeName)
 ///Extra stuff we want to patch into the CSS
 function getCssPatches() {
     let PATCH_ICONS = `.icon-add,.icon-align,.icon-align_bottom,.icon-align_dish,.icon-align_disv,.icon-align_grid,.icon-align_hmiddle,.icon-align_horizontal_center,.icon-align_horizontal_equidistant,.icon-align_left,.icon-align_left_side_edge_equidistant,.icon-align_right,.icon-align_top,.icon-align_top_side_edge_equidistant,.icon-align_vertical_center,.icon-align_vertical_equidistant,.icon-align_vmiddle,.icon-back,.icon-bom,.icon-bring-to-front,.icon-bug,.icon-cancel,.icon-checked,.icon-checked0,.icon-clone,.icon-code,.icon-config,.icon-config-waveform,.icon-copy,.icon-copy_dis,.icon-cut,.icon-database,.icon-delete,.icon-dos,.icon-down,.icon-edit,.icon-edit_dis,.icon-export,.icon-eye,.icon-favorite,.icon-file,.icon-file2,.icon-filesave,.icon-fitwindow,.icon-fliph,.icon-flipv,.icon-folder,.icon-folder-closed,.icon-fork,.icon-fullscreen,.icon-fullscreen_exit,.icon-help,.icon-help2,.icon-help3,.icon-home,.icon-import,.icon-import_changes,.icon-info,.icon-keyboard,.icon-language,.icon-measureLine,.icon-menu,.icon-netlist,.icon-new,.icon-new_dis,.icon-newprj,.icon-no,.icon-none,.icon-ok,.icon-open,.icon-open_dis,.icon-other,.icon-page,.icon-page_range,.icon-part0,.icon-paste,.icon-paste_dis,.icon-pcb,.icon-pcb3d,.icon-pcblib,.icon-pcblib3d,.icon-place,.icon-place2,.icon-place_dis,.icon-presentation,.icon-preview,.icon-print,.icon-print2,.icon-print_dis,.icon-prj,.icon-question,.icon-redo,.icon-redo2,.icon-redo2_dis,.icon-redo_dis,.icon-refresh,.icon-reload,.icon-reload_dis,.icon-remove,.icon-rotate,.icon-rotate_dis,.icon-rotate_left,.icon-rotate_left_dis,.icon-rotate_right,.icon-rotate_right.disabled,.icon-rotate_right_dis,.icon-run,.icon-save,.icon-save_as,.icon-save_as_dis,.icon-save_dis,.icon-sch,.icon-sch2,.icon-schlib,.icon-schlib2,.icon-schlib3d,.icon-schmatic,.icon-search,.icon-search2,.icon-selected,.icon-selection,.icon-send-to-back,.icon-settings,.icon-share1,.icon-share2,.icon-spicesymbol,.icon-subckt,.icon-tag,.icon-undo,.icon-undo2,.icon-undo2_dis,.icon-undo_dis,.icon-unfavorite,.icon-up,.icon-waveform,.icon-zback,.icon-zfront,.icon-zoom_in,.icon-zoom_out {
-    background-image: linear-gradient(rgba(1, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${api('getRes', 'icons.png')});
+    background-image: url(${api('getRes', 'icons.png')});
     background-repeat: no-repeat;
     opacity: 0.8;}`
 
