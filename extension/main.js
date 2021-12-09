@@ -23,6 +23,8 @@ main();
 
 async function main()
 {
+    Helper.checkUpdate()
+
     _themes = await Helper.loadFile('themes.json', Helper.fileTypes.JSON)
     _css = await Helper.loadFile("style.txt", Helper.fileTypes.TEXT)
 
@@ -37,7 +39,6 @@ async function main()
 
     cb_ApplyTheme(Helper.getValue(STOREID.LAST_THEME, getDefaultTheme())) //Apply last theme from storage or use default
 }
-
 
 ///Applies the theme based on the passed theme name according to its name in 'THEMES' below
 function cb_ApplyTheme(themeName) 
@@ -57,9 +58,7 @@ function cb_ApplyTheme(themeName)
 
     setEditorTheme(theme)
     
-    let selected = $('#theme_selected_checkmark') //Update the checkmark on the active theme
-    if(selected)
-        selected.remove();
+    $("div[id*='theme_selected_checkmark'").each((i, el) => el.remove()) //Update the checkmark on the active theme, remove all previous checkmarks.
     $(`div[cmd="${getCommandId(`${COMMANDID.APPLY_THEME}(${themeName})`)}"]`).prepend('<div id="theme_selected_checkmark" class="menu-icon icon-selected"/>')
 
     _activeTheme = themeName

@@ -59,10 +59,8 @@ a:-webkit-any-link {
 
 /* Main */
 
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 body
 {
-    font-family: 'Roboto' !important;
     color: var(--Text) !important;
     background: var(--Background) !important;
     font-family: 'Roboto', sans-serif;
@@ -1032,4 +1030,20 @@ menu-icon.icon-selected {
 
 .gray-border {
     border: 1px solid var(--Contrast) !important;
+}
+
+.icon-eda-project {
+    color: var(--Accent_Color) !important;
+}
+
+.custom {
+    background: var(--Background) !important;
+}
+
+.tree-node:not(.tree-node-selected)>.tree-icon.icon-eda-eelib, .tree-node:not(.tree-node-selected)>.tree-icon.icon-eda-sch {
+    color: var(--Operators_Color) !important;
+}
+
+.tree-node:not(.tree-node-selected)>.tree-icon.icon-eda-pcb {
+    color: var(--Strings_Color) !important;
 }
