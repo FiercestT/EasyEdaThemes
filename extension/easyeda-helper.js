@@ -2,6 +2,7 @@
     Stolen with love and modified from https://github.com/xsrf/easyeda-svg-import <3
 */
 
+const releasesUrl = 'https://github.com/FiercestT/EasyEdaThemes/releases/latest'
 const extensionId = Object.entries(easyeda.extension.instances).filter(e => e[1].blobURLs && e[1].blobURLs['manifest.json'] == api('getRes',{file:'manifest.json'}))[0][1].id;
 const instance = easyeda.extension.instances[extensionId];
 
@@ -77,36 +78,40 @@ instance.Helper = class Helper
         (async ()=>{
             try {
                 if(!('version' in instance.manifest)) return;
-                if(!('homepage' in instance.manifest)) return;
-                if(!('updatebaseurl' in instance.manifest)) return;
-                var skipVersion = this.getValue('update-skip', instance.manifest.version);
-                var cmdUpdatePage = this.createCommand(()=>{ window.open(instance.manifest.homepage,'_blank') });
-                var cmdUpdateSkip = this.createCommand(()=>{ this.setConfig('update-skip',skipVersion) });
-                var response = await fetch(instance.manifest.updatebaseurl + 'manifest.json');
-                if(response.status != 200) {
-                    console.log('Update check failed, Status: ' + response.status);
-                    return;
+
+                let data = await (await fetch('https://api.github.com/repos/FiercestT/EasyEdaThemes/releases/latest')).json()
+                let latestVersion = data["tag_name"].match(/(\d\.)+\d/g)
+                let curVersion = instance.manifest.version
+
+                //Semantic version check
+
+                let latest = latestVersion[0].split('.')
+                let cur = curVersion.split('.')
+                let needsUpdate = false
+
+                for(let i = 0; i < latest.length; i++)
+                {
+                    if(parseFloat(`0.${latest[i] || 0}`) > parseFloat(`0.${cur[i] || 0}`))
+                    {
+                        needsUpdate = true
+                        break
+                    }
                 }
-                var onlineManifest = await response.json();
-                if(onlineManifest.version == instance.manifest.version) {
-                    console.log(`Update check ok, "${extensionId}" is up to date`);
-                    return;
-                }
-                if(onlineManifest.version == skipVersion) {
-                    console.log(`Update check ok, "${extensionId}" is not up to date but version is skipped`);
-                    return;
-                }
-                console.log(`Update check ok, "${extensionId}" is not up to date`);
-                skipVersion = onlineManifest.version;
+
+                if(!needsUpdate)
+                    return
+
+                var updateCmd = this.createCommand('updateVersion', ()=>{ window.open(releasesUrl,'_blank') });
+
                 $.messager.show({
                     title: `Update Available for <b>${instance.manifest.name}</b>`,
                     msg: `<table>
                             <tr><td>Installed:</td><td>${instance.manifest.name} ${instance.manifest.version}</td></tr>
-                            <tr><td>Available:</td><td>${onlineManifest.name} ${onlineManifest.version}</td></tr>
+                            <tr><td>Available:</td><td>${latestVersion}</td></tr>
                         </table>
                         <div class="dialog-button">
-                            <a tabindex="0" cmd="${cmdUpdatePage};dialog-close" class="l-btn"><span class="l-btn-left"><span class="l-btn-text i18n">Download</span></span></a>
-                            <a tabindex="0" cmd="${cmdUpdateSkip};dialog-close" class="l-btn"><span class="l-btn-left"><span class="l-btn-text i18n">Skip Version</span></span></a>
+                            <a tabindex="0" cmd="${updateCmd};dialog-close" class="l-btn"><span class="l-btn-left"><span class="l-btn-text i18n">Download</span></span></a>
+                            <a tabindex="0" cmd="dialog-close" class="l-btn"><span class="l-btn-left"><span class="l-btn-text i18n">Close</span></span></a>
                         </div>
                         `,
                     height: 'auto',
