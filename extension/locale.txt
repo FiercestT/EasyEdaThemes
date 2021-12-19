@@ -1,0 +1,10 @@
+[zh-cn]
+EasyEda Themer = 颜色主题
+Customize the EasyEda UI and editors. Made by Fiercest: https://github.com/FiercestT = 自定义界面与编辑器配色。作者 Fiercest: https://github.com/FiercestT
+Themer = 颜色主题
+Select Theme = 选择主题
+Edit CSS = 编辑CSS
+Themer CSS Editor = CSS编辑器
+Apply = 应用
+Cancel = 取消
+Refresh = 刷新
