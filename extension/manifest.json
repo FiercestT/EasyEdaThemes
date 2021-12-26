@@ -4,7 +4,8 @@
     "author": "Fiercest",
     "version": "1.2.1",
     "homepage": "https://github.com/FiercestT/EasyEdaThemes",
-    "scripts": [ 
+    "locale": "locale.txt",
+    "scripts": [
         "easyeda-helper.js",
         "main.js"
     ]

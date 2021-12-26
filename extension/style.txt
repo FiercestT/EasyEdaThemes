@@ -147,6 +147,12 @@ input[type="checkbox"]:checked:focus:after {
     color: var(--Accent_Color) !important;
 }
 
+input[type="checkbox"]+label,
+input[type="checkbox"]+span {
+    position: relative;
+    top: -5px;
+}
+
 /* Radio Input */
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
