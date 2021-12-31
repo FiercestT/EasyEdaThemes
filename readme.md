@@ -1,4 +1,11 @@
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/FiercestT/EasyEdaThemes?style=for-the-badge) ![GitHub all releases](https://img.shields.io/github/downloads/FiercestT/EasyEdaThemes/total?style=for-the-badge)
+<div>
+  <a href="https://github.com/FiercestT/EasyEdaThemes/releases/">
+    <img src="https://img.shields.io/github/v/release/FiercestT/EasyEdaThemes?style=for-the-badge" />
+  </a>
+  <a href="https://github.com/FiercestT/EasyEdaThemes/releases/">
+    <img src="https://img.shields.io/github/downloads/FiercestT/EasyEdaThemes/total?style=for-the-badge" />
+  </a>
+</div>
 
 # EasyEda Themes Extension
 
