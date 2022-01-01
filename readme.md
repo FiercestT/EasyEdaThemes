@@ -1,5 +1,5 @@
 <div>
-  <a href="https://github.com/FiercestT/EasyEdaThemes/releases/">
+  <a href="https://github.com/FiercestT/EasyEdaThemes/releases/latest">
     <img src="https://img.shields.io/github/v/release/FiercestT/EasyEdaThemes?style=for-the-badge" />
   </a>
   <a href="https://github.com/FiercestT/EasyEdaThemes/releases/">
