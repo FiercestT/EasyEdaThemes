@@ -8,13 +8,13 @@
 /* Specific Things */
 
 a:-webkit-any-link {
-    color: var(--Links_Color) !important;
+    color: var(--link) !important;
 }
 
 /* Scrollbar */
 * {
     scrollbar-width: thin !important;
-    scrollbar-color: var(--Accent_Color) !important;
+    scrollbar-color: var(--accent_color) !important;
 }
 
 *::-webkit-scrollbar {
@@ -27,60 +27,60 @@ a:-webkit-any-link {
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: var(--Accent_Color) !important;
+    background-color: var(--accent_color) !important;
     border-radius: 20px !important;
 }
 
 /* Input Field Placeholders */
 
 ::placeholder {
-    color: var(--Disabled) !important;
+    color: var(--disabled) !important;
     opacity: 1;
 }
 
 :-ms-input-placeholder {
-    color: var(--Disabled) !important;
+    color: var(--disabled) !important;
 }
 
 ::-ms-input-placeholder {
-    color: var(--Disabled) !important;
+    color: var(--disabled) !important;
 }
 
 /* Text Highlighting */
 ::-moz-selection {
     /* Code for Firefox */
-    color: var(--Selection_Foreground);
-    background: var(--Selection_Background);
+    color: var(--selection_foreground);
+    background: var(--selection_background);
 }
 
 ::selection {
-    color: var(--Selection_Foreground);
-    background: var(--Selection_Background);
+    color: var(--selection_foreground);
+    background: var(--selection_background);
 }
 
 /* Main */
 
 body {
-    color: var(--Text) !important;
-    background: var(--Background) !important;
+    color: var(--text) !important;
+    background: var(--background) !important;
     font-family: "Roboto", sans-serif;
 }
 
 #main {
-    border-top: 1px solid var(--Contrast) !important;
+    border-top: 1px solid var(--contrast) !important;
 }
 
 /* Input Fields */
 
 .menu-search .menu-search-input:valid~.menu-search-empty {
-    color: var(--Accent_Color) !important;
+    color: var(--accent_color) !important;
 }
 
 .menu-search .menu-search-input {
-    background: var(--Background) !important;
-    border-bottom: 1px solid var(--Accent_Color) !important;
-    color: var(--Text) !important;
-    caret-color: var(--Accent_Color);
+    background: var(--background) !important;
+    border-bottom: 1px solid var(--accent_color) !important;
+    color: var(--text) !important;
+    caret-color: var(--accent_color);
 }
 
 input:disabled {
@@ -93,10 +93,10 @@ input[type="number"],
 input[type="telephone"],
 input[type="text"] {
     background: none !important;
-    color: var(--Text) !important;
+    color: var(--text) !important;
     border: none !important;
-    border-bottom: 1px solid var(--Accent_Color) !important;
-    caret-color: var(--Accent_Color) !important;
+    border-bottom: 1px solid var(--accent_color) !important;
+    caret-color: var(--accent_color) !important;
     border-radius: 0px;
     opacity: 0.8;
 }
@@ -107,7 +107,7 @@ input[type="number"]:focus,
 input[type="telephone"]:focus,
 input[type="text"]:focus {
     opacity: 1;
-    color: var(--Selection_Foreground) !important;
+    color: var(--selection_foreground) !important;
 }
 
 input::-webkit-outer-spin-button,
@@ -124,7 +124,7 @@ input[type="number"] {
 input[type="checkbox"] {
     -webkit-appearance: none;
     background-color: transparent;
-    border: 1px solid var(--Accent_Color) !important;
+    border: 1px solid var(--accent_color) !important;
     padding: 9px;
     border-radius: 3px;
     display: inline-block;
@@ -144,7 +144,7 @@ input[type="checkbox"]:checked:focus:after {
     position: absolute;
     top: 0px;
     left: 3px;
-    color: var(--Accent_Color) !important;
+    color: var(--accent_color) !important;
 }
 
 input[type="checkbox"]+label,
@@ -169,7 +169,7 @@ input[type="checkbox"]+span {
     cursor: pointer;
     line-height: 20px;
     display: inline-block;
-    color: var(--Text);
+    color: var(--text);
 }
 
 [type="radio"]:checked+label:before,
@@ -182,7 +182,7 @@ input[type="checkbox"]+span {
     top: 0;
     width: 12px;
     height: 12px;
-    border: 1px solid var(--Text);
+    border: 1px solid var(--text);
     border-radius: 100%;
     background: transparent;
 }
@@ -194,7 +194,7 @@ input[type="checkbox"]+span {
     content: "";
     width: 8px;
     height: 8px;
-    background: var(--Accent_Color);
+    background: var(--accent_color);
     position: absolute;
     top: 3px;
     left: 3px;
@@ -219,9 +219,9 @@ input[type="checkbox"]+span {
 
 select {
     border: transparent !important;
-    color: var(--Text) !important;
+    color: var(--text) !important;
     background: none !important;
-    border-bottom: 0.5px solid var(--Accent_Color) !important;
+    border-bottom: 0.5px solid var(--accent_color) !important;
 }
 
 select:focus {
@@ -229,28 +229,28 @@ select:focus {
 }
 
 select option {
-    background: var(--Background) !important;
-    color: var(--Text) !important;
+    background: var(--background) !important;
+    color: var(--text) !important;
 }
 
 .easyui-comboboxdrop-select-droplist-input {
-    background: var(--Background) !important;
-    border-bottom: 1px solid var(--Accent_Color) !important;
+    background: var(--background) !important;
+    border-bottom: 1px solid var(--accent_color) !important;
     border: transparent;
-    color: var(--Text) !important;
+    color: var(--text) !important;
 }
 
 textarea {
-    background: var(--Contrast) !important;
-    color: var(--Foreground) !important;
-    border: 1px solid var(--Contrast) !important;
-    caret-color: var(--Accent_Color) !important;
+    background: var(--contrast) !important;
+    color: var(--foreground) !important;
+    border: 1px solid var(--contrast) !important;
+    caret-color: var(--accent_color) !important;
 }
 
 #new_mydesc {
     background: transparent !important;
-    color: var(--Text) !important;
-    border: 1.5px solid var(--Contrast) !important;
+    color: var(--text) !important;
+    border: 1.5px solid var(--contrast) !important;
 }
 
 /* Tables */
@@ -267,38 +267,38 @@ table,
 /* Table Headers */
 .fixedTableHeader>div,
 .fixedTableHeader>div:not(:last-child) {
-    color: var(--Text) !important;
-    background: var(--Background) !important;
+    color: var(--text) !important;
+    background: var(--background) !important;
     border-right: none !important;
 }
 
 .fixedTableHeader {
-    border: 1px solid var(--Contrast) !important;
+    border: 1px solid var(--contrast) !important;
 }
 
 /* Parts Library */
 
 #dlgLibs .dlgLibs-categories-btn-label {
-    color: var(--Text) !important;
+    color: var(--text) !important;
 }
 
 #dlgLibs .btn[data-active] {
     border: none !important;
-    border-bottom: 1px solid var(--Accent_Color) !important;
-    color: var(--Accent_Color) !important;
+    border-bottom: 1px solid var(--accent_color) !important;
+    color: var(--accent_color) !important;
     background: none !important;
 }
 
 /* Table Rows */
 tr,
 th {
-    border-bottom: 1px solid var(--Contrast) !important;
-    color: var(--Text) !important;
-    background: var(--Background) !important;
+    border-bottom: 1px solid var(--contrast) !important;
+    color: var(--text) !important;
+    background: var(--background) !important;
 }
 
 tr:hover {
-    background: var(--Contrast) !important;
+    background: var(--contrast) !important;
 }
 
 /* Table Datacell */
@@ -309,8 +309,8 @@ tr:hover {
 
 /* Selected Cell */
 #dlgLibs tbody tr.selected {
-    color: var(--Selection_Foreground) !important;
-    background: var(--Selection_Background) !important;
+    color: var(--selection_foreground) !important;
+    background: var(--selection_background) !important;
 }
 
 /* Table Icons */
@@ -319,7 +319,7 @@ tr:hover {
 .panel-tool-collapse,
 .panel-tool-expand {
     background: none !important;
-    color: var(--Accent_Color) !important;
+    color: var(--accent_color) !important;
 }
 
 /* Table Icons */
@@ -336,98 +336,98 @@ tr:hover {
 /* Top Bar */
 
 #userbar {
-    background: var(--Background) !important;
+    background: var(--background) !important;
 }
 
 a.l-btn-disabled .l-btn-empty:before {
-    color: var(--Disabled) !important;
+    color: var(--disabled) !important;
 }
 
 a.m-btn-plain-active {
     background: transparent !important;
-    color: var(--Selection_Foreground) !important;
+    color: var(--selection_foreground) !important;
 }
 
 a.l-btn {
-    color: var(--Text) !important;
+    color: var(--text) !important;
 }
 
 a.l-btn:hover {
-    color: var(--Selection_Foreground) !important;
+    color: var(--selection_foreground) !important;
 }
 
 #userNameBox:hover {
-    color: var(--Accent_Color) !important;
+    color: var(--accent_color) !important;
 }
 
 #userAvatarBox img {
-    border: 1px solid var(--Accent_Color);
+    border: 1px solid var(--accent_color);
 }
 
 .menu-search .menu-search-empty,
 .menu-search .menu-search-empty+button {
-    background: var(--Background) !important;
+    background: var(--background) !important;
 }
 
 .menu-search .menu-search-empty,
 .menu-search .menu-search-empty+button {
-    color: var(--Accent_Color) !important;
+    color: var(--accent_color) !important;
 }
 
 .menu {
-    background: var(--Background) !important;
+    background: var(--background) !important;
 }
 
 .menu-vlink {
-    background: var(--Foreground) !important;
+    background: var(--foreground) !important;
 }
 
 .menu-active {
-    background: var(--Contrast) !important;
-    color: var(--Variables_Color) !important;
+    background: var(--contrast) !important;
+    color: var(--hover_text) !important;
 }
 
 .menu-item-disabled:hover {
-    background-color: var(--Background) !important;
+    background-color: var(--background) !important;
 }
 
 .menu-item-disabled {
-    color: var(--Disabled) !important;
+    color: var(--disabled) !important;
 }
 
 .menu-item-disabled .menu-text {
-    color: var(--Disabled) !important;
+    color: var(--disabled) !important;
 }
 
 .menu-text {
-    color: var(--Text) !important;
+    color: var(--text) !important;
 }
 
 .menu-active .menu-text {
-    color: var(--Variables_Color) !important;
+    color: var(--hover_text) !important;
 }
 
 .menu-sep {
-    background: var(--Selection_Background) !important;
+    background: var(--selection_background) !important;
 }
 
 .menu-item.menu-active,
 .menu-item.menu-active[data-hotkey]:after {
-    color: var(--Variables_Color) !important;
+    color: var(--hover_text) !important;
 }
 
 .menu-rightarrow {
-    border-left: 4px solid var(--Links_Color) !important;
+    border-left: 4px solid var(--link) !important;
 }
 
 #editor-news {
-    border: 1px solid var(--Border) !important;
+    border: 1px solid var(--border) !important;
 }
 
 #editor-news,
 .menu,
 .toolbar {
-    border: 1px solid var(--Border) !important;
+    border: 1px solid var(--border) !important;
 }
 
 #editorTabbar {
@@ -435,31 +435,31 @@ a.l-btn:hover {
 }
 
 #leftNavTabs {
-    color: var(--Text) !important;
-    background: var(--Background) !important;
-    border-right: 2px solid var(--Contrast) !important;
+    color: var(--text) !important;
+    background: var(--background) !important;
+    border-right: 2px solid var(--contrast) !important;
 }
 
 #leftNavTabs>div:hover {
-    color: var(--Selection_Foreground) !important;
-    background: var(--Background) !important;
+    color: var(--selection_foreground) !important;
+    background: var(--background) !important;
 }
 
 #leftNavTabs>div[data-active] {
-    color: var(--Selection_Foreground) !important;
-    background-color: var(--Background) !important;
+    color: var(--selection_foreground) !important;
+    background-color: var(--background) !important;
     border-top: none !important;
     border-bottom: none !important;
 }
 
 #leftNavTabs+div {
-    background-color: var(--Background) !important;
+    background-color: var(--background) !important;
 }
 
 .tabbar {
-    background: var(--Background) !important;
-    border-bottom: 1px solid var(--Border) !important;
-    color: var(--Text) !important;
+    background: var(--background) !important;
+    border-bottom: 1px solid var(--border) !important;
+    color: var(--text) !important;
 }
 
 .tabbar-tab {
@@ -467,20 +467,20 @@ a.l-btn:hover {
 }
 
 #tabbar .tabbar-tab.active {
-    border-bottom: 2px solid var(--Accent_Color) !important;
-    color: var(--Selection_Foreground) !important;
+    border-bottom: 2px solid var(--accent_color) !important;
+    color: var(--selection_foreground) !important;
 }
 
 #tabbar .tabbar-tab {
-    background-color: var(--Background) !important;
+    background-color: var(--background) !important;
 }
 
 #tabbar .tabbar-tab:not(.active) {
-    color: var(--Text) !important;
+    color: var(--text) !important;
 }
 
 #treeOpenedProject-container .icon16[cmd] {
-    color: var(--Text) !important;
+    color: var(--text) !important;
 }
 
 #layoutLeft {
@@ -488,80 +488,88 @@ a.l-btn:hover {
 }
 
 .layout-toggler {
-    background: var(--Contrast) !important;
+    background: var(--contrast) !important;
     width: 3px !important;
     cursor: ew-resize !important;
 }
 
 .layout-toggler-design-manager {
-    background: var(--Contrast) !important;
+    background: var(--contrast) !important;
     height: 3px !important;
     cursor: ns-resize !important;
 }
 
 .layout-toggler>div {
+    background: transparent !important;
+    color: var(--accent_color) !important;
+    border: none !important;
     visibility: hidden !important;
 }
 
 /* Left Bar */
 
+.tree-node-selected, .tree-node-selected .tree-title {
+    background: transparent !important;
+    color: inherit !important;
+}
+
 .libgroupcaption {
-    border-bottom: 1px solid var(--Contrast) !important;
+    border-bottom: 1px solid var(--contrast) !important;
 }
 
 .left-search-input {
-    border-bottom: 1px solid var(--Contrast) !important;
+    border-bottom: 1px solid var(--contrast) !important;
 }
 
 .tabbar-bodies>div {
-    background: var(--Background) !important;
+    background: var(--background) !important;
 }
 
 .toolbar .titlebar {
-    background: var(--Border) !important;
-    border-bottom: 1px solid var(--Contrast) !important;
-    color: var(--Text) !important;
+    background: var(--border) !important;
+    border-bottom: 1px solid var(--contrast) !important;
+    color: var(--text) !important;
 }
 
 .toolbar .btns {
-    background: var(--Background) !important;
+    background: var(--background) !important;
 }
 
 div.layoutRight {
-    background: var(--Background) !important;
+    background: var(--background) !important;
 }
 
 #attr-main .title {
-    background: var(--Contrast) !important;
-    color: var(--Selection_Foreground) !important;
+    background: var(--contrast) !important;
+    color: var(--selection_foreground) !important;
 }
 
 .clear {
-    background: var(--Background) !important;
+    background: var(--background) !important;
 }
 
 #attrlist-table-notice .line>div {
-    background: var(--Background);
+    background: var(--background);
     border-left: none !important;
     border-right: none !important;
     border-bottom: none !important;
 }
 
 #attrlist-table-notice {
-    border-top: 1px solid var(--Contrast) !important;
+    border-top: 1px solid var(--contrast) !important;
 }
 
 .addtab,
 .sub-tabbar .tabbar-tab {
     border: none !important;
-    background: var(--Background) !important;
-    color: var(--Text) !important;
-    box-shadow: 0 2px 4px var(--Contrast) !important;
+    background: var(--background) !important;
+    color: var(--text) !important;
+    box-shadow: 0 2px 4px var(--contrast) !important;
 }
 
 .sub-tabbar .tabbar-tab.active,
 .sub-tabbar .tabbar-tab:hover:not(.active) {
-    background: var(--Background) !important;
+    background: var(--background) !important;
 }
 
 .addtab {
@@ -570,119 +578,119 @@ div.layoutRight {
 
 .addtab .plus,
 .addtab .plus:after {
-    background: var(--Text) !important;
+    background: var(--text) !important;
 }
 
 .tabs li.tabs-selected a {
-    color: var(--Selection_Foreground) !important;
-    background: var(--Background) !important;
-    border-bottom: 2px solid var(--Accent_Color) !important;
+    color: var(--selection_foreground) !important;
+    background: var(--background) !important;
+    border-bottom: 2px solid var(--accent_color) !important;
 }
 
 .tabs li a.tabs-inner {
-    color: var(--Text) !important;
-    background: var(--Background) !important;
+    color: var(--text) !important;
+    background: var(--background) !important;
 }
 
 .tabs {
-    border-bottom: 1px solid var(--Background) !important;
+    border-bottom: 1px solid var(--background) !important;
 }
 
 #editor-start-page .box_shadow {
-    box-shadow: -1px -1px 6px var(--Contrast) !important;
-    border: solid 1px var(--Contrast) !important;
+    box-shadow: -1px -1px 6px var(--contrast) !important;
+    border: solid 1px var(--contrast) !important;
 }
 
 #editor_start_right_page {
-    background: var(--Background) !important;
+    background: var(--background) !important;
 }
 
 #editor-start-page .weui-grid__label {
-    color: var(--Text) !important;
+    color: var(--text) !important;
 }
 
 #editor_start_right_page li * {
-    color: var(--Keywords_Color) !important;
+    color: var(--list_item) !important;
 }
 
 #start_page_change_mode {
-    background-color: var(--Accent_Color) !important;
-    color: var(--Notifications) !important;
+    background-color: var(--accent_color) !important;
+    color: var(--button_text) !important;
 }
 
 #use_page_mode_page {
-    border-right: 1px solid var(--Foreground) !important;
+    border-right: 1px solid var(--foreground) !important;
 }
 
 #use_page_more_help {
-    border-top: 1px solid var(--Foreground) !important;
+    border-top: 1px solid var(--foreground) !important;
 }
 
 .panel-header {
-    background: var(--Background) !important;
-    color: var(--Text) !important;
+    background: var(--background) !important;
+    color: var(--text) !important;
 }
 
 .panel-header-noborder {
-    border-bottom: 1px solid var(--Contrast) !important;
+    border-bottom: 1px solid var(--contrast) !important;
 }
 
 #dlgLibs-keyword,
 .window .window-body {
-    background: var(--Background) !important;
-    color: var(--Text) !important;
+    background: var(--background) !important;
+    color: var(--text) !important;
 }
 
 .window {
-    border: 2px solid var(--Contrast) !important;
+    border: 2px solid var(--contrast) !important;
     background: transparent !important;
 }
 
 #path-pre {
     background: none !important;
     border: none !important;
-    color: var(--Text) !important;
-    border-bottom: 1px solid var(--Accent_Color) !important;
+    color: var(--text) !important;
+    border-bottom: 1px solid var(--accent_color) !important;
 }
 
 .dialog-button {
-    background: var(--Background) !important;
-    border-top: 1px solid var(--Contrast) !important;
+    background: var(--background) !important;
+    border-top: 1px solid var(--contrast) !important;
 }
 
 .dialog-button a.l-btn:not(.l-btn-plain),
 .messager-button a.l-btn:not(.l-btn-plain) {
-    background: var(--Accent_Color) !important;
-    color: var(--Notifications) !important;
+    background: var(--accent_color) !important;
+    color: var(--button_text) !important;
 }
 
 .dialog-button a.l-btn:not(.l-btn-plain):hover,
 .messager-button a.l-btn:not(.l-btn-plain):hover {
-    background: var(--Accent_Color) !important;
-    color: var(--Notifications) !important;
+    background: var(--accent_color) !important;
+    color: var(--button_text) !important;
 }
 
 .easyui-combobox-select-droplist,
 .easyui-comboboxdrop-select-droplist {
-    background: var(--Background) !important;
-    box-shadow: 0px 2px 2px var(--Contrast) !important;
+    background: var(--background) !important;
+    box-shadow: 0px 2px 2px var(--contrast) !important;
 }
 
 #pcblayerTabs .tabs {
-    background: var(--Background) !important;
+    background: var(--background) !important;
 }
 
 #toolbar-pcblayer table {
-    background: var(--Background) !important;
+    background: var(--background) !important;
 }
 
 #toolbar-pcblayer tr.active {
-    background: var(--Contrast) !important;
-    color: var(--Variables_Color) !important;
+    background: var(--contrast) !important;
+    color: var(--hover_text) !important;
 }
 
 .panel-body {
-    background: var(--Background) !important;
+    background: var(--background) !important;
 }
 
 #pcblayerTabs .tabs li {
@@ -698,41 +706,41 @@ div.layoutRight {
 }
 
 #designManagerTree .icon-eda-refresh {
-    color: var(--Accent_Color) !important;
+    color: var(--accent_color) !important;
 }
 
 #designManagerTree .icon-eda-refresh:hover {
-    color: var(--Selection_Foreground) !important;
+    color: var(--selection_foreground) !important;
 }
 
 .libitem {
-    border-bottom: 1px solid var(--Contrast) !important;
-    border-right: 1px solid var(--Contrast) !important;
+    border-bottom: 1px solid var(--contrast) !important;
+    border-right: 1px solid var(--contrast) !important;
 }
 
 .libitem:hover {
-    background: var(--Background) !important;
-    color: var(--Selection_Foreground) !important;
-    border-bottom: 1px solid var(--Accent_Color) !important;
+    background: var(--background) !important;
+    color: var(--selection_foreground) !important;
+    border-bottom: 1px solid var(--accent_color) !important;
 }
 
 .libitem>div.dropdown {
-    border: 1px solid var(--Border) !important;
-    background: var(--Background) !important;
+    border: 1px solid var(--border) !important;
+    background: var(--background) !important;
 }
 
 .libitem>div.dropdown:after {
-    border-top: 4px solid var(--Accent_Color) !important;
+    border-top: 4px solid var(--accent_color) !important;
 }
 
 #dlgLibs-filter,
 #dlgLibs-search {
-    color: var(--Text) !important;
+    color: var(--text) !important;
 }
 
 #dlgLibs-filter,
 #dlgLibs-search:hover {
-    color: var(--Accent_Color) !important;
+    color: var(--accent_color) !important;
 }
 
 .dlgLibs-searchform-container {
@@ -745,20 +753,20 @@ div.layoutRight {
 }
 
 #dlgLibs-list-hierarchy {
-    color: var(--Text) !important;
+    color: var(--text) !important;
 }
 
 #dlgLibs-tags {
-    background: var(--Background) !important;
+    background: var(--background) !important;
 }
 
 #dlg-tag-tree>li>.tree-node {
-    background: var(--Contrast) !important;
+    background: var(--contrast) !important;
     border: none !important;
 }
 
 #dlgLibs-preview {
-    background: var(--Background) !important;
+    background: var(--background) !important;
 }
 
 #dlg-tag-tree {
@@ -774,7 +782,7 @@ div.layoutRight {
 }
 
 #dlgLibs .icon16 {
-    color: var(--Accent_Color) !important;
+    color: var(--accent_color) !important;
 }
 
 #layoutLeft input,
@@ -783,63 +791,63 @@ div.layoutRight {
 }
 
 a.l-btn:not(.l-btn-plain) {
-    background: var(--Background) !important;
-    border: 1px solid var(--Accent_Color) !important;
-    color: var(--Accent_Color) !important;
+    background: var(--background) !important;
+    border: 1px solid var(--accent_color) !important;
+    color: var(--accent_color) !important;
 }
 
 a.l-btn:not(.l-btn-plain):hover {
-    background: var(--Accent_Color) !important;
-    border: 1px solid var(--Accent_Color) !important;
-    color: var(--Notifications) !important;
+    background: var(--accent_color) !important;
+    border: 1px solid var(--accent_color) !important;
+    color: var(--button_text) !important;
 }
 
 .hightlight {
-    background: var(--Accent_Color) !important;
+    background: var(--accent_color) !important;
 }
 
 #dlgLibs-lcsc .lcsc-price {
-    color: var(--Tags_Color) !important;
+    color: var(--muted_text) !important;
 }
 
 #dlgLibs-lcsc-stock {
-    color: var(--Tags_Color) !important;
+    color: var(--muted_text) !important;
 }
 
 #dlgLibs-lcsc-part {
-    color: var(--Tags_Color) !important;
+    color: var(--muted_text) !important;
 }
 
 #dlgLibs-lcsc-distributor>strong {
-    color: var(--Tags_Color) !important;
+    color: var(--muted_text) !important;
 }
 
 .num {
-    color: var(--Tags_Color) !important;
+    color: var(--muted_text) !important;
 }
 
 #dlgLibs-lcsc .lcsc-buy,
 #dlgLibs-lcsc .lcsc-pdf {
-    color: var(--Text) !important;
+    color: var(--text) !important;
 }
 
 #dlgLibs-lcsc .lcsc-buy:hover,
 #dlgLibs-lcsc .lcsc-pdf:hover {
-    color: var(--Selection_Foreground) !important;
+    color: var(--selection_foreground) !important;
 }
 
 #dlgLibs-lcsc-minimum {
-    color: var(--Tags_Color) !important;
+    color: var(--muted_text) !important;
 }
 
 .btn:hover {
-    color: var(--Selection_Foreground) !important;
+    color: var(--selection_foreground) !important;
 }
 
 /* Icon Overrides */
 [class*=" icon-"]:not(.dialog-button, a.l-btn):hover,
 [class^="icon-"]:not(.dialog-button, a.l-btn):hover {
-    color: var(--Selection_Foreground) !important;
+    color: var(--selection_foreground) !important;
 }
 
 /* Panel Close Button */
@@ -848,7 +856,7 @@ a.l-btn:not(.l-btn-plain):hover {
 .panel-tool-min,
 .panel-tool-restore {
     background: none !important;
-    color: var(--Tags_Color) !important;
+    color: var(--muted_text) !important;
 }
 
 .panel-tool-close:before,
@@ -861,7 +869,7 @@ a.l-btn:not(.l-btn-plain):hover {
 }
 
 .panel-tool-over {
-    color: var(--Tags_Color) !important;
+    color: var(--muted_text) !important;
 }
 
 menu-icon.icon-selected {
@@ -870,7 +878,7 @@ menu-icon.icon-selected {
 }
 
 .ext-item {
-    border-bottom: 1px solid var(--Contrast) !important;
+    border-bottom: 1px solid var(--contrast) !important;
 }
 
 .ext-item.ext-disabled {
@@ -879,34 +887,34 @@ menu-icon.icon-selected {
 
 .ext-disabled .ext-desc,
 .ext-disabled .ext-name-state {
-    color: var(--Text) !important;
+    color: var(--text) !important;
 }
 
 .toolbar .collapse,
 .toolbar .icon-eda-config,
 .toolbar .icon-eda-pinlocation {
-    color: var(--Text) !important;
+    color: var(--text) !important;
 }
 
 .toolbar .collapse:hover,
 .toolbar .icon-eda-config:hover,
 .toolbar .icon-eda-pinlocation:hover {
-    color: var(--Selection_Foreground) !important;
+    color: var(--selection_foreground) !important;
 }
 
 #dlgExport-tip-Pdf div[fordoctype="pcb"] {
-    color: var(--Tags_Color) !important;
+    color: var(--muted_text) !important;
 }
 
 .datagrid-header {
-    border-bottom: 1px solid var(--Contrast) !important;
+    border-bottom: 1px solid var(--contrast) !important;
     background: transparent !important;
 }
 
 .datagrid-body td,
 .datagrid-footer td {
     border-right: transparent !important;
-    border-bottom: 1px solid var(--Contrast) !important;
+    border-bottom: 1px solid var(--contrast) !important;
 }
 
 .datagrid-header td {
@@ -914,12 +922,12 @@ menu-icon.icon-selected {
 }
 
 #dlgExportBOM td[field="BOM_Supplier Part"] .assign-part-btn {
-    color: var(--Links_Color) !important;
+    color: var(--link) !important;
     background: transparent !important;
 }
 
 #dlgExportBOM td .verified {
-    color: var(--Accent_Color) !important;
+    color: var(--accent_color) !important;
 }
 
 .datagrid-header td.datagrid-header-over {
@@ -927,7 +935,7 @@ menu-icon.icon-selected {
 }
 
 .i18n link {
-    color: var(--Links_Color) !important;
+    color: var(--link) !important;
 }
 
 #dlgLibs-liblist .fixedTableHeader>div,
@@ -937,17 +945,26 @@ menu-icon.icon-selected {
 
 .tree-node-selected {
     background: transparent !important;
-    color: var(--Accent_Color) !important;
+    color: var(--accent_color) !important;
 }
 
 .tree-node-hover {
-    color: var(--Selection_Foreground) !important;
+    color: var(--selection_foreground) !important;
+    background: transparent !important;
+}
+
+.tree-node-hover .tree-title {
+    background: transparent !important;
+}
+
+.tree-node:hover {
+    color: none !important;
     background: transparent !important;
 }
 
 .tree-node-selected.tree-node-hover {
     background: transparent !important;
-    color: var(--Accent_Color) !important;
+    color: var(--accent_color) !important;
 }
 
 .panel.window .toggle-size {
@@ -969,7 +986,7 @@ menu-icon.icon-selected {
 
 #dlgUpdatePackage .colum>div {
     background: transparent !important;
-    color: var(--Text) !important;
+    color: var(--text) !important;
 }
 
 #dlgUpdatePackage ul {
@@ -977,13 +994,13 @@ menu-icon.icon-selected {
 }
 
 #dlgUpdatePackage ul li.active {
-    background: var(--Selection_Background) !important;
-    color: var(--Selection_Foreground) !important;
+    background: var(--selection_background) !important;
+    color: var(--selection_foreground) !important;
 }
 
 #dlgUpdatePackage ul li:hover {
     background: transparent !important;
-    color: var(--Selection_Foreground) !important;
+    color: var(--selection_foreground) !important;
 }
 
 #dlgUpdatePackage .category,
@@ -993,7 +1010,7 @@ menu-icon.icon-selected {
 }
 
 #dlgUpdatePackage .middle-content .bottom .header {
-    background: var(--Contrast) !important;
+    background: var(--contrast) !important;
 }
 
 #dlgUpdatePackage .middle-content .bottom>div {
@@ -1001,13 +1018,13 @@ menu-icon.icon-selected {
 }
 
 #dlgUpdatePackage .right-list .title span.active {
-    color: var(--Accent_Color) !important;
-    border-bottom: 1px solid var(--Accent_Color) !important;
+    color: var(--accent_color) !important;
+    border-bottom: 1px solid var(--accent_color) !important;
 }
 
 #dlgUpdatePackage .right-list .title span {
-    color: var(--Text) !important;
-    background: var(--Background) !important;
+    color: var(--text) !important;
+    background: var(--background) !important;
     border: none !important;
     border-left: none !important;
 }
@@ -1025,7 +1042,7 @@ menu-icon.icon-selected {
 }
 
 #dlgUpdatePackage div.datagrid-header-over {
-    background: var(--Contrast) !important;
+    background: var(--contrast) !important;
 }
 
 .datagrid-sort-asc .datagrid-sort-icon:after {
@@ -1039,25 +1056,25 @@ menu-icon.icon-selected {
 .datagrid-sort-asc .datagrid-sort-icon,
 .datagrid-sort-desc .datagrid-sort-icon {
     background: none !important;
-    color: var(--Accent_Color) !important;
+    color: var(--accent_color) !important;
 }
 
 #dlgUpdatePackage .search button {
-    color: var(--Text) !important;
+    color: var(--text) !important;
 }
 
 #dlgUpdatePackage .right-list .search button.filter {
-    color: var(--Text) !important;
+    color: var(--text) !important;
 }
 
 .tab[show-to].active {
-    color: var(--Accent_Color) !important;
-    border-bottom: 1px solid var(--Accent_Color);
+    color: var(--accent_color) !important;
+    border-bottom: 1px solid var(--accent_color);
     background: transparent !important;
 }
 
 .tab[show-to] {
-    color: var(--Text) !important;
+    color: var(--text) !important;
     background: transparent !important;
 }
 
@@ -1067,7 +1084,7 @@ menu-icon.icon-selected {
 
 .title .i18n {
     background: transparent !important;
-    color: var(--Text) !important;
+    color: var(--text) !important;
 }
 
 #dlgUpdatePackage div.datagrid-header td[field]:not([field="checked"]) {
@@ -1089,26 +1106,26 @@ menu-icon.icon-selected {
 }
 
 .dialog-theme-tab {
-    background: var(--Background) !important;
+    background: var(--background) !important;
 }
 
 .gray-border {
-    border: 1px solid var(--Contrast) !important;
+    border: 1px solid var(--contrast) !important;
 }
 
 .icon-eda-project {
-    color: var(--Accent_Color) !important;
+    color: var(--accent_color) !important;
 }
 
 .custom {
-    background: var(--Background) !important;
+    background: var(--background) !important;
 }
 
 .tree-node:not(.tree-node-selected)>.tree-icon.icon-eda-eelib,
 .tree-node:not(.tree-node-selected)>.tree-icon.icon-eda-sch {
-    color: var(--Operators_Color) !important;
+    color: var(--schematic_icon) !important;
 }
 
 .tree-node:not(.tree-node-selected)>.tree-icon.icon-eda-pcb {
-    color: var(--Strings_Color) !important;
+    color: var(--pcb_icon) !important;
 }

@@ -1,10 +1,76 @@
 [zh-cn]
-EasyEda Themer = 颜色主题
-Customize the EasyEda UI and editors. Made by Fiercest: https://github.com/FiercestT = 自定义界面与编辑器配色。作者 Fiercest: https://github.com/FiercestT
-Themer = 颜色主题
+EasyEDA Themes = 颜色主题
+Customize the EasyEDA UI and editors. Made by Fiercest: https://github.com/FiercestT = 自定义界面与编辑器配色。作者 Fiercest: https://github.com/FiercestT
+Themes = 颜色主题
 Select Theme = 选择主题
 Edit CSS = 编辑CSS
-Themer CSS Editor = CSS编辑器
+Themes CSS Editor = CSS编辑器
 Apply = 应用
 Cancel = 取消
 Refresh = 刷新
+
+[es]
+EasyEDA Themes = EasyEDA Temas
+Customize the EasyEDA UI and editors. Made by Fiercest: https://github.com/FiercestT = Personaliza la UI y los editores de EasyEDA. Hecho por Fiercest: https://github.com/FiercestT
+Themes = Temas
+Select Theme = Seleccionar tema
+Edit CSS = Editar CSS
+Themes CSS Editor = Editor CSS de Temas
+Apply = Aplicar
+Cancel = Cancelar
+Refresh = Actualizar
+
+[fr]
+EasyEDA Themes = EasyEDA Thèmes
+Customize the EasyEDA UI and editors. Made by Fiercest: https://github.com/FiercestT = Personnalisez l'UI et les éditeurs EasyEDA. Par Fiercest: https://github.com/FiercestT
+Themes = Thèmes
+Select Theme = Sélectionner le thème
+Edit CSS = Modifier CSS
+Themes CSS Editor = Éditeur CSS des thèmes
+Apply = Appliquer
+Cancel = Annuler
+Refresh = Actualiser
+
+[de]
+EasyEDA Themes = EasyEDA Themen
+Customize the EasyEDA UI and editors. Made by Fiercest: https://github.com/FiercestT = Passen Sie die EasyEDA-UI und -Editoren an. Von Fiercest: https://github.com/FiercestT
+Themes = Themen
+Select Theme = Thema auswählen
+Edit CSS = CSS bearbeiten
+Themes CSS Editor = Themes CSS-Editor
+Apply = Anwenden
+Cancel = Abbrechen
+Refresh = Aktualisieren
+
+[ja]
+EasyEDA Themes = EasyEDA テーマ
+Customize the EasyEDA UI and editors. Made by Fiercest: https://github.com/FiercestT = EasyEDAのUIとエディターをカスタマイズします。制作者: Fiercest https://github.com/FiercestT
+Themes = テーマ
+Select Theme = テーマを選択
+Edit CSS = CSSを編集
+Themes CSS Editor = テーマCSSエディター
+Apply = 適用
+Cancel = キャンセル
+Refresh = 更新
+
+[pt]
+EasyEDA Themes = EasyEDA Temas
+Customize the EasyEDA UI and editors. Made by Fiercest: https://github.com/FiercestT = Personalize a UI e os editores do EasyEDA. Feito por Fiercest: https://github.com/FiercestT
+Themes = Temas
+Select Theme = Selecionar tema
+Edit CSS = Editar CSS
+Themes CSS Editor = Editor CSS de Temas
+Apply = Aplicar
+Cancel = Cancelar
+Refresh = Atualizar
+
+[ru]
+EasyEDA Themes = EasyEDA Темы
+Customize the EasyEDA UI and editors. Made by Fiercest: https://github.com/FiercestT = Настройте интерфейс и редакторы EasyEDA. Автор: Fiercest https://github.com/FiercestT
+Themes = Темы
+Select Theme = Выбрать тему
+Edit CSS = Редактировать CSS
+Themes CSS Editor = Редактор тем CSS
+Apply = Применить
+Cancel = Отмена
+Refresh = Обновить
