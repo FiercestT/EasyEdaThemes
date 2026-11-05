@@ -375,7 +375,7 @@ function InitUI() {
     })
 }
 
-var _lastActiveTabDoctype = null
+var _lastActiveTab = null
 
 function InitTabObserver() 
 {
@@ -384,11 +384,15 @@ function InitTabObserver()
     }
     _tabObserverInterval = setTimeout(() => {
         if(!easyeda.extension.instances[extensionId]) return
-        let activeTab = $(".tabbar-tab.active")[0]
-        if(!activeTab) return
-        let doctype = activeTab.getAttribute("doctype")
-        if([null, "2", "7", "13"].includes(doctype)) {
-            setEditorTheme(getSchematicThemeForTheme(getActiveTheme()))
+        let activeTab = $(".tabbar-tab.active")[0] || null
+        if(activeTab !== _lastActiveTab) {
+            _lastActiveTab = activeTab
+            if(activeTab) {
+                let doctype = activeTab.getAttribute("doctype")
+                if([null, "2", "7", "13"].includes(doctype)) {
+                    setEditorTheme(getSchematicThemeForTheme(getActiveTheme()))
+                }
+            }
         }
         InitTabObserver()
     }, 1000)
